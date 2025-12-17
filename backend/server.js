@@ -179,7 +179,7 @@ app.post("/login", (req, res) => {
       success: false,
       expired: true,
       expireAt: expireTimestamp(user),
-      message: "គណនេយ្យរបស់អ្នកផុតកាលកំណត់ហើយ។ <br>Account expired. Please contact admin."
+      message: "គណនេយ្យរបស់អ្នកផុតកាលកំណត់ហើយ សូមទាក់ទងអ្នកលក់។ Account expired. Please contact Seller ❤."
     });
   }
 
