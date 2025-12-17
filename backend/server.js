@@ -104,7 +104,6 @@ const USERS = [
   { username: "Sreynet", password: "net@121225", startDate: "2025-11-16", durationDays: 365 },
   { username: "Arunrefa", password: "refa@121225", startDate: "2025-11-16", durationDays: 365 },
   { username: "Chakriya", password: "ya@121225", startDate: "2025-11-16", durationDays: 365 },
-  { username: "Dararaksmey", password: "smey@121225", startDate: "2025-11-16", durationDays: 365 },
   { username: "kimbunthav", password: "thav@171225", startDate: "2025-11-16", durationDays: 365 }
   // ... Add for all users
 ];
