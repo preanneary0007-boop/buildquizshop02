@@ -23,12 +23,12 @@ function saveDB(data) {
 }
 
 // === USERS CONFIG ===
-// Add startDate & durationDays manually for each user
 const USERS = [
-  { username: "Yuos_chamroeun", password: "chamroeun@2025", startDate: "2025-11-11", durationDays: 1200 },
+
+{ username: "Yuos_chamroeun", password: "chamroeun@2025", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Soma", password: "soma@2025", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Sokthida", password: "sokthida@2025", startDate: "2025-11-11", durationDays: 365 },
-  { username: "Vutha", password: "vutha@2057", startDate: "2025-11-11", durationDays: 365 },
+  { username: "Vutha", password: "vutha@168", startDate: "2025-11-11", durationDays: 365 },
   { username: "Simtap", password: "simtap@2025", startDate: "2025-11-11", durationDays: 365 },
   { username: "Chanlim", password: "chanlim@2025", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Raksa", password: "raksa@2025", startDate: "2025-11-11", durationDays: 1200 },
@@ -56,7 +56,7 @@ const USERS = [
   { username: "Rathana", password: "rathana@2025", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Leangmey", password: "leangmey@99", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Somnang", password: "somnang@99", startDate: "2025-11-11", durationDays: 1200 },
-  { username: "Chamroeun", password: "chomroeun03/11/1993", startDate: "2025-12-16", durationDays: 1 },
+  { username: "Chamroeun", password: "chomroeun03/11/1993", startDate: "2025-12-16", durationDays: 365 },
   { username: "Mengleang", password: "meng168leang", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Chamnab", password: "chamnab@168", startDate: "2025-11-11", durationDays: 1200 },
   { username: "Chandara", password: "dara@2025", startDate: "2025-11-11", durationDays: 1200 },
@@ -93,7 +93,7 @@ const USERS = [
   { username: "Oudom", password: "dom@151225", startDate: "2025-11-15", durationDays: 365 },
   { username: "Sopheak", password: "pheak@151225", startDate: "2025-11-15", durationDays: 365 },
   { username: "Ponleu", password: "ponleu@168", startDate: "2025-11-16", durationDays: 1000 },
-    { username: "Boline", password: "boline@151225", startDate: "2025-11-15", durationDays: 365 },
+  { username: "Boline", password: "boline@151225", startDate: "2025-11-15", durationDays: 365 },
   { username: "Rangsey", password: "sey@151225", startDate: "2025-11-15", durationDays: 365 },
   { username: "Sovannarath", password: "rath@151225", startDate: "2025-11-15", durationDays: 365 },
   { username: "Channak", password: "nak@151225", startDate: "2025-11-15", durationDays: 365 },
@@ -104,8 +104,29 @@ const USERS = [
   { username: "Sreynet", password: "net@121225", startDate: "2025-11-16", durationDays: 365 },
   { username: "Arunrefa", password: "refa@121225", startDate: "2025-11-16", durationDays: 365 },
   { username: "Chakriya", password: "ya@121225", startDate: "2025-11-16", durationDays: 365 },
-  { username: "kimbunthav", password: "thav@171225", startDate: "2025-11-16", durationDays: 365 }
-  // ... Add for all users
+  { username: "Dararaksmey", password: "smey@121225", startDate: "2025-11-16", durationDays: 365 },
+  { username: "Sengpheaktra", password: "tra@121225", startDate: "2025-11-16", durationDays: 365 },
+  { username: "kimbunthav", password: "thav@171225", startDate: "2025-11-16", durationDays: 365 },
+  { username: "Sokla", password: "sokla@2025", startDate: "2025-11-16", durationDays: 1200 },
+  { username: "Linda", password: "linda@2026", startDate: "2025-11-16", durationDays: 1200 },
+  { username: "Sovan", password: "sovan@2025", startDate: "2025-11-16", durationDays: 1200 },
+  { username: "Longpheng", password: "pheng@2026", startDate: "2026-1-10", durationDays: 1 },
+  { username: "Thavongvuth", password: "vuth@168", startDate: "2026-1-10", durationDays: 366 },
+  { username: "Pichbondith", password: "bondith@168", startDate: "2026-1-14", durationDays: 366 },
+  { username: "Samart", password: "art@168", startDate: "2026-1-14", durationDays: 366 },
+  { username: "Kimsor", password: "kimsor@1280", startDate: "2026-1-14", durationDays: 365 },
+  { username: "Kamsan2", password: "san@002", startDate: "2026-1-14", durationDays: 366 },
+  { username: "Chheang", password: "Chheang7272", startDate: "2026-1-28", durationDays: 366 },
+
+
+  //------laboratory accounts-----
+  { username: "Test", password: "test@2026", startDate: "2026-01-08", durationDays: 30 },
+  { username: "Test02", password: "test@2026", startDate: "2026-01-08", durationDays: 30 }
+
+
+
+
+
 ];
 
 // === Initialize Users ===
@@ -124,19 +145,20 @@ const USERS = [
         requestId: null,
         declineMessage: null,
         lastActive: 0,
-
-        // NEW
         startDate: u.startDate || null,
-        durationDays: u.durationDays || 365
+        durationDays: u.durationDays || 365,
+        lastUrl: null,
+        quizProgress: null // <--- បន្ថែមថ្មី៖ សម្រាប់ទុកទិន្នន័យ Quiz
       };
     } else {
+      // Update config changes
       db.users[u.username].password = u.password;
-
-      if (!db.users[u.username].startDate)
-        db.users[u.username].startDate = u.startDate || null;
-
-      if (!db.users[u.username].durationDays)
-        db.users[u.username].durationDays = u.durationDays || 365;
+      if (!db.users[u.username].startDate) db.users[u.username].startDate = u.startDate || null;
+      if (!db.users[u.username].durationDays) db.users[u.username].durationDays = u.durationDays || 365;
+      
+      // Ensure fields exist
+      if (db.users[u.username].lastUrl === undefined) db.users[u.username].lastUrl = null;
+      if (db.users[u.username].quizProgress === undefined) db.users[u.username].quizProgress = null; // <--- បន្ថែមថ្មី
     }
   });
 
@@ -145,13 +167,10 @@ const USERS = [
 
 function genToken() { return crypto.randomUUID(); }
 
-// === EXPIRATION HANDLER ===
 function isExpired(user) {
   if (!user.startDate) return false;
-
   const start = new Date(user.startDate).getTime();
   const expire = start + user.durationDays * 24 * 60 * 60 * 1000;
-
   return Date.now() >= expire;
 }
 
@@ -173,17 +192,15 @@ app.post("/login", (req, res) => {
   if (!user) return res.json({ success: false, message: "Invalid username" });
   if (user.password !== password) return res.json({ success: false, message: "Wrong password" });
 
-  // CHECK EXPIRATION
   if (isExpired(user)) {
     return res.json({
       success: false,
       expired: true,
       expireAt: expireTimestamp(user),
-      message: "គណនេយ្យរបស់អ្នកផុតកាលកំណត់ហើយ សូមទាក់ទងអ្នកលក់។ Account expired. Please contact Seller ❤."
+      message: "Account expired. Please contact admin."
     });
   }
 
-  // CHECK DECLINE
   if (user.declineMessage) {
     const msg = user.declineMessage;
     user.declineMessage = null;
@@ -193,24 +210,25 @@ app.post("/login", (req, res) => {
 
   user.lastActive = Date.now();
 
-  // FIRST LOGIN
-  if (!user.deviceId) {
-    user.deviceId = deviceId;
-    user.sessionToken = genToken();
-    user.status = "active";
-    saveDB(db);
-    return res.json({ success: true, token: user.sessionToken, expireAt: expireTimestamp(user) });
-  }
+  const responseData = {
+    success: true,
+    expireAt: expireTimestamp(user),
+    lastUrl: user.lastUrl,
+    quizProgress: user.quizProgress // <--- បន្ថែមថ្មី៖ ផ្ញើ Progress ទៅ Frontend ពេល Login
+  };
 
-  // SAME DEVICE LOGIN
-  if (user.deviceId === deviceId) {
+  // FIRST LOGIN or SAME DEVICE
+  if (!user.deviceId || user.deviceId === deviceId) {
+    if (!user.deviceId) user.deviceId = deviceId;
     if (!user.sessionToken) user.sessionToken = genToken();
     user.status = "active";
+    
+    responseData.token = user.sessionToken;
     saveDB(db);
-    return res.json({ success: true, token: user.sessionToken, expireAt: expireTimestamp(user) });
+    return res.json(responseData);
   }
 
-  // SECOND DEVICE LOGIN → REQUEST APPROVAL
+  // SECOND DEVICE LOGIN
   user.status = "pending";
   user.waitingDevice = deviceId;
   user.requestId = genToken();
@@ -224,35 +242,43 @@ app.post("/login", (req, res) => {
   });
 });
 
+// === UPDATE PROGRESS ROUTE (Modified) ===
+app.post("/update-progress", (req, res) => {
+  const { username, token, url, quizProgress } = req.body; // <--- ទទួល quizProgress
+  if (!username || !token) return res.json({ success: false });
+
+  const db = loadDB();
+  const user = db.users[username];
+
+  if (user && user.sessionToken === token) {
+    if (url) user.lastUrl = url;
+    if (quizProgress) user.quizProgress = quizProgress; // <--- រក្សាទុក Quiz Data
+    
+    user.lastActive = Date.now();
+    saveDB(db);
+    return res.json({ success: true });
+  }
+  return res.json({ success: false });
+});
+
+// ... (កូដ check-requests, approve, decline, logout, auto-logout រក្សាទុកដដែល) ...
 // === CHECK REQUESTS ===
 app.post("/check-requests", (req, res) => {
   const { username } = req.body;
-
   const db = loadDB();
   const user = db.users[username];
-
   if (user) {
     const now = Date.now();
-    if (now - user.lastActive > 10000) {
-      user.lastActive = now;
-      saveDB(db);
-    }
-
-    if (user.status === "pending") {
-      return res.json({ hasRequest: true, requestId: user.requestId });
-    }
+    if (now - user.lastActive > 10000) { user.lastActive = now; saveDB(db); }
+    if (user.status === "pending") return res.json({ hasRequest: true, requestId: user.requestId });
   }
-
   return res.json({ hasRequest: false });
 });
 
-// === APPROVE ===
 app.post("/approve", (req, res) => {
   const { username, requestId } = req.body;
-
   const db = loadDB();
   const user = db.users[username];
-
   if (user && user.requestId === requestId) {
     user.deviceId = user.waitingDevice;
     user.sessionToken = genToken();
@@ -262,71 +288,52 @@ app.post("/approve", (req, res) => {
     saveDB(db);
     return res.json({ success: true });
   }
-
   return res.json({ success: false });
 });
 
-// === DECLINE ===
 app.post("/decline", (req, res) => {
   const { username } = req.body;
-
   const db = loadDB();
   const user = db.users[username];
-
-  user.declineMessage =
-    "Sorry! Account owner did not approve. សូមទោស! ម្ចាស់គណនីមិនអនុញ្ញាតទេ។";
-
+  user.declineMessage = "Sorry! Account owner did not approve.";
   user.status = "active";
   user.waitingDevice = null;
   user.requestId = null;
-
   saveDB(db);
   return res.json({ success: true });
 });
 
-// === LOGOUT ===
 app.post("/logout", (req, res) => {
   const { token } = req.body;
-
   const db = loadDB();
-
   for (const k in db.users) {
     const u = db.users[k];
-
     if (u.sessionToken === token) {
       u.sessionToken = null;
       u.deviceId = null;
       u.status = "logged_out";
-
       saveDB(db);
       return res.json({ success: true });
     }
   }
-
   res.json({ success: false });
 });
 
-// === AUTO LOGOUT (30min inactive) ===
 setInterval(() => {
   const db = loadDB();
   const now = Date.now();
-
   let updateNeeded = false;
-
   for (const k in db.users) {
     const u = db.users[k];
-
     if (u.deviceId && u.lastActive && now - u.lastActive > 30 * 60 * 1000) {
       u.deviceId = null;
       u.sessionToken = null;
       u.status = "logged_out";
       u.waitingDevice = null;
       u.requestId = null;
-
       updateNeeded = true;
     }
   }
-
   if (updateNeeded) saveDB(db);
 }, 60000);
 
